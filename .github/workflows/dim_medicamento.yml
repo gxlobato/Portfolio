@@ -1,7 +1,7 @@
 name: dim_medicamento.yml
 on:
-  schedule:
-    - cron: '0 6 * * *'  # 06:00 UTC todo dia
+ # schedule:
+  #  - cron: '0 6 * * *'  # 06:00 UTC todo dia
   workflow_dispatch:  # permite rodar manualmente também
 
 jobs:
