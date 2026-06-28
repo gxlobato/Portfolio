@@ -1,8 +1,9 @@
-name: dim_medicamento.yml
+name: dim_medicamento
+
 on:
- # schedule:
-  #  - cron: '0 6 * * *'  # 06:00 UTC todo dia
-  workflow_dispatch:  # permite rodar manualmente também
+  # schedule:
+  #   - cron: '0 6 * * *'  # 06:00 UTC todo dia
+  workflow_dispatch: # permite rodar manualmente também
 
 jobs:
   run-script:
@@ -13,27 +14,19 @@ jobs:
         with:
           python-version: '3.11'
       - run: pip install -r estoque_farmaceutico/requirements.txt
-      - run: python estoque_farmaceutico/script/analytics.dim_medicamento.py
+      - name: Atualizar dim_medicamento
+        run: python estoque_farmaceutico/script/analytics.dim_medicamento.py
         env:
           DB_HOST: ${{ secrets.DB_HOST }}
           DB_NAME: ${{ secrets.DB_NAME }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           DB_PORT: ${{ secrets.DB_PORT }}
-          
-   run-script:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - run: pip install -r estoque_farmaceutico/requirements.txt
-      - run: python estoque_farmaceutico/script/analytics.fact_estoque_semanal.py
+      - name: Atualizar fact_estoque_semanal
+        run: python estoque_farmaceutico/script/analytics.fact_estoque_semanal.py
         env:
           DB_HOST: ${{ secrets.DB_HOST }}
           DB_NAME: ${{ secrets.DB_NAME }}
           DB_USER: ${{ secrets.DB_USER }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
           DB_PORT: ${{ secrets.DB_PORT }}
-
