@@ -1,19 +1,13 @@
 """
-FACT_ESTOQUE_SEMANAL PIPELINE - FACT TABLE LOAD WITH SURROGATE KEYS
-================================================================================
-Loads weekly stock movement and balances into analytics.fact_estoque_semanal.
-Performs LEFT JOINs to resolve business keys into analytics surrogate keys.
+FACT_ESTOQUE_SEMANAL PIPELINE - EXTREME SPEED
 """
 
 import os
 import pandas as pd
 import psycopg2
 from dotenv import load_dotenv
-from sqlalchemy import create_engine, inspect
+from sqlalchemy import create_engine
 
-# ============================================================================
-# CONFIGURATION
-# ============================================================================
 load_dotenv()
 
 DB_CONFIG = {
@@ -27,28 +21,28 @@ DB_CONFIG = {
 DATABASE_URL = f"postgresql://{DB_CONFIG['user']}:{DB_CONFIG['password']}@{DB_CONFIG['host']}:{DB_CONFIG['port']}/{DB_CONFIG['database']}"
 
 print("=" * 70)
-print("FACT_ESTOQUE_SEMANAL PIPELINE")
+print("FACT_ESTOQUE_SEMANAL (EXTREME)")
 print("=" * 70)
 
 # ============================================================================
 # CONNECTION
 # ============================================================================
-print("\n Connecting to database...")
+print("\n[1] Connecting...")
 conn = psycopg2.connect(**DB_CONFIG)
 cursor = conn.cursor()
 engine = create_engine(DATABASE_URL)
 print("Connected!")
 
 # ============================================================================
-# LOAD SOURCE DATA WITH SURROGATE KEY JOINS
+# LOAD DATA
 # ============================================================================
-print("\n Loading source data and joining with Dimensions...")
+print("\n[2] Loading data...")
 
-# Query realizando os JOINs necessários para capturar as chaves substitutas (_key)
 query = """
-    SELECT DISTINCT
+    SELECT 
         s.sala_key,
         m.medicamento_key,
+        dl.lote_key,
         raw.semana_referencia,
         raw.ano,
         raw.semana_numero,
@@ -58,38 +52,34 @@ query = """
         raw.saldo_final,
         raw.ruptura_estoque
     FROM raw.estoque_movimentacao_semanal raw
-    LEFT JOIN analytics.dim_sala s 
-        ON raw.sala_id = s.sala_id
-    LEFT JOIN analytics.dim_medicamento m 
-        ON raw.medicamento_id = m.medicamento_id
+    LEFT JOIN analytics.dim_sala s ON raw.sala_id = s.sala_id
+    LEFT JOIN analytics.dim_medicamento m ON raw.medicamento_id = m.medicamento_id
+    LEFT JOIN raw.lotes l ON raw.medicamento_id = l.medicamento_id and raw.sala_id = l.sala_id
+    LEFT JOIN analytics.dim_lote dl ON l.lote_id = dl.lote_id
     WHERE raw.sala_id IS NOT NULL 
       AND raw.medicamento_id IS NOT NULL
 """
+
 df = pd.read_sql(query, engine)
+print(f"Records: {len(df)}")
 
-if df.empty:
-    print("No data found in source. Exiting.")
-    cursor.close()
+if len(df) == 0:
+    print("No data. Exiting.")
     conn.close()
-    exit()
+    exit(0)
 
-print(f"Loaded {len(df)} rows linked to dimensions.")
+# ============================================================================
+# CREATE TABLE
+# ============================================================================
+print("\n[3] Creating table...")
 
-target_table_name = 'fact_estoque_semanal'
-target_schema = 'analytics'
-full_target_table = f"{target_schema}.{target_table_name}"
-
-# Verifica se a tabela Fato existe
-inspector = inspect(engine)
-table_exists = inspector.has_table(target_table_name, schema=target_schema)
-
-if not table_exists:
-    print(f"\n Creating new Fact table {full_target_table}...")
-    cursor.execute(f"""
-    CREATE TABLE {full_target_table} (
+cursor.execute("DROP TABLE IF EXISTS analytics.fact_estoque_semanal CASCADE")
+cursor.execute("""
+    CREATE TABLE analytics.fact_estoque_semanal (
         fact_key INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
         sala_key INT NOT NULL,
         medicamento_key INT NOT NULL,
+        lote_key INT NOT NULL,               
         semana_referencia DATE NOT NULL,
         ano INT,
         semana_numero INT,
@@ -100,42 +90,26 @@ if not table_exists:
         ruptura_estoque BOOLEAN,
         createdtm TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         changedtm TIMESTAMP NULL,
-        -- Chave única composta para garantir a granularidade e permitir o UPSERT
         CONSTRAINT uq_fact_estoque_semanal UNIQUE (sala_key, medicamento_key, semana_referencia)
     )
-    """)
-    conn.commit()
-
-print(f"\n Performing UPSERT (Insert/Update) into {full_target_table}...")
-
-# Query de UPSERT baseada na restrição de chave única composta
-upsert_query = f"""
-    INSERT INTO {full_target_table} (
-        sala_key, medicamento_key, semana_referencia, ano, semana_numero,
-        saldo_inicial, entradas, saidas, saldo_final, ruptura_estoque
-    )
-    VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
-    ON CONFLICT (sala_key, medicamento_key, semana_referencia) 
-    DO UPDATE SET 
-        ano = EXCLUDED.ano,
-        semana_numero = EXCLUDED.semana_numero,
-        saldo_inicial = EXCLUDED.saldo_inicial,
-        entradas = EXCLUDED.entradas,
-        saidas = EXCLUDED.saidas,
-        saldo_final = EXCLUDED.saldo_final,
-        ruptura_estoque = EXCLUDED.ruptura_estoque,
-        changedtm = CURRENT_TIMESTAMP;
-"""
-
-# Converte DataFrame para tuplas
-data_to_insert = [tuple(x) for x in df.to_numpy()]
-
-# Carga massiva
-cursor.executemany(upsert_query, data_to_insert)
+""")
 conn.commit()
+print("Table created")
 
-print(f"Pipeline finished successfully! Affected rows: {cursor.rowcount}")
+# ============================================================================
+# BULK INSERT
+# ============================================================================
+print("\n[4] Bulk inserting...")
 
-# Fechar conexões
-cursor.close()
+# Usar to_sql para insert rápido
+df.to_sql('fact_estoque_semanal', engine, schema='analytics', 
+          if_exists='append', index=False, method='multi')
+
+print(f"Inserted: {len(df)} records")
+
 conn.close()
+print("\nDone!")
+
+print("\n" + "=" * 70)
+print("PIPELINE COMPLETED")
+print("=" * 70)
