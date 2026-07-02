@@ -1,4 +1,4 @@
-# 📊 Portfolio — Gabi Lobato
+# 📊 Portfolio — Gabriela Lobato
 
 > 🇧🇷 Português | [🇺🇸 English below](#-portfolio---gabi-lobato-1)
 
@@ -45,7 +45,7 @@ Portfolio/
 
 ---
 
-# 🇺🇸 Portfolio — Gabi Lobato
+# 🇺🇸 Portfolio — Gabriela Lobato
 
 Portfolio of **Data Engineering and Analytics** projects, featuring
 end-to-end pipelines: ingestion, dimensional modeling, automation and
