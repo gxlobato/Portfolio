@@ -1,0 +1,21 @@
+"medicamento_id","nome","categoria","fabricante","principio_ativo","preco_unitario","validade_dias_padrao","armazenamento_refrigerado","createdt"
+1,Loratadina 10mg,Antialérgico,Cristália,Loratadina,8.10,540,false,2026-06-25 11:44:13.298
+2,Desloratadina 5mg,Antialérgico,Cristália,Desloratadina,3.56,365,false,2026-06-25 11:44:13.298
+3,Cetirizina 10mg,Antialérgico,EMS,Cetirizina,28.30,540,false,2026-06-25 11:44:13.298
+4,Paracetamol 750mg,Analgésico/Antitérmico,Hypera,Paracetamol,38.70,365,false,2026-06-25 11:44:13.298
+5,Dipirona Sódica 500mg,Analgésico/Antitérmico,Medley,Dipirona,53.37,540,false,2026-06-25 11:44:13.298
+6,Ibuprofeno 600mg,Anti-inflamatório,Pfizer,Ibuprofeno,27.31,730,false,2026-06-25 11:44:13.298
+7,Amoxicilina 500mg,Antibiótico,Cristália,Amoxicilina,10.88,540,false,2026-06-25 11:44:13.298
+8,Azitromicina 500mg,Antibiótico,Medley,Azitromicina,34.67,365,false,2026-06-25 11:44:13.298
+9,Dextrometorfano Xarope,Antitussígeno,Medley,Dextrometorfano,73.59,730,false,2026-06-25 11:44:13.298
+10,Ambroxol Xarope,Expectorante,Hypera,Ambroxol,40.22,540,false,2026-06-25 11:44:13.298
+11,Omeprazol 20mg,Antiulceroso,Aché,Omeprazol,80.29,540,false,2026-06-25 11:44:13.298
+12,Losartana Potássica 50mg,Anti-hipertensivo,Eurofarma,Losartana,34.91,540,false,2026-06-25 11:44:13.298
+13,Metformina 850mg,Antidiabético,Hypera,Metformina,22.32,730,false,2026-06-25 11:44:13.298
+14,Sinvastatina 20mg,Hipolipemiante,Aché,Sinvastatina,13.45,365,false,2026-06-25 11:44:13.298
+15,Levotiroxina 50mcg,Hormonal,Pfizer,Levotiroxina,6.30,540,false,2026-06-25 11:44:13.298
+16,Insulina NPH 100UI/mL,Antidiabético,EMS,Insulina,24.59,180,true,2026-06-25 11:44:13.298
+17,Vacina Influenza,Imunobiológico,Pfizer,Vacina,65.06,180,true,2026-06-25 11:44:13.298
+18,"Soro Fisiológico 0,9% 500mL",Solução Parenteral,Cristália,Soro,45.89,540,false,2026-06-25 11:44:13.298
+19,Hidroclorotiazida 25mg,Diurético,Aché,Hidroclorotiazida,18.57,730,false,2026-06-25 11:44:13.298
+20,Fluconazol 150mg,Antifúngico,Eurofarma,Fluconazol,66.67,540,false,2026-06-25 11:44:13.298
