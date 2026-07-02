@@ -1,0 +1,11 @@
+"sala_id","nome","regiao","cidade","uf","capacidade_m3","createdt"
+1,CD São Paulo,Sudeste,São Paulo,SP,1811.26,2026-06-25 11:43:40.425
+2,CD Rio de Janeiro,Sudeste,Rio de Janeiro,RJ,3366.93,2026-06-25 11:43:40.425
+3,CD Belo Horizonte,Sudeste,Belo Horizonte,MG,2776.38,2026-06-25 11:43:40.425
+4,CD Curitiba,Sul,Curitiba,PR,2416.38,2026-06-25 11:43:40.425
+5,CD Porto Alegre,Sul,Porto Alegre,RS,1221.25,2026-06-25 11:43:40.425
+6,CD Recife,Nordeste,Recife,PE,1221.19,2026-06-25 11:43:40.425
+7,CD Salvador,Nordeste,Salvador,BA,956.83,2026-06-25 11:43:40.425
+8,CD Goiânia,Centro-Oeste,Goiânia,GO,3138.68,2026-06-25 11:43:40.425
+9,CD Manaus,Norte,Manaus,AM,2423.01,2026-06-25 11:43:40.425
+10,CD Brasília,Centro-Oeste,Brasília,DF,2711.80,2026-06-25 11:43:40.425

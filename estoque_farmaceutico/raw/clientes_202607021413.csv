@@ -1,0 +1,201 @@
+"cliente_id","nome","tipo_cliente","cidade","uf","sala_id_principal","createdt"
+1,Alves e Filhos,Drogaria Popular,Brasília,DF,10,2026-06-25 11:45:40.367
+2,da Cruz,Hospital,Goiânia,GO,8,2026-06-25 11:45:40.367
+3,Carvalho Sousa S/A,UPA,Manaus,AM,9,2026-06-25 11:45:40.367
+4,Pastor - ME,Farmácia,Porto Alegre,RS,5,2026-06-25 11:45:40.367
+5,Alves S/A,Hospital,Rio de Janeiro,RJ,2,2026-06-25 11:45:40.367
+6,da Conceição Montenegro - EI,Farmácia,Goiânia,GO,8,2026-06-25 11:45:40.367
+7,Novais S.A.,Farmácia,Manaus,AM,9,2026-06-25 11:45:40.367
+8,Câmara,Farmácia,São Paulo,SP,1,2026-06-25 11:45:40.367
+9,Pastor,Clínica,Manaus,AM,9,2026-06-25 11:45:40.367
+10,Abreu,Farmácia,Goiânia,GO,8,2026-06-25 11:45:40.367
+11,Sampaio Lima Ltda.,Clínica,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+12,Cassiano,Clínica,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+13,Teixeira Fernandes S/A,Drogaria Popular,Porto Alegre,RS,5,2026-06-25 11:45:40.367
+14,Garcia S/A,Farmácia,Brasília,DF,10,2026-06-25 11:45:40.367
+15,Ferreira,Drogaria Popular,Salvador,BA,7,2026-06-25 11:45:40.367
+16,Aparecida,Farmácia,Rio de Janeiro,RJ,2,2026-06-25 11:45:40.367
+17,Nascimento,Farmácia,Salvador,BA,7,2026-06-25 11:45:40.367
+18,Garcia S/A,Clínica,Goiânia,GO,8,2026-06-25 11:45:40.367
+19,Pires,Farmácia,Goiânia,GO,8,2026-06-25 11:45:40.367
+20,Oliveira,Hospital,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+21,Santos Azevedo S/A,UPA,Porto Alegre,RS,5,2026-06-25 11:45:40.367
+22,Vargas da Rocha S/A,Clínica,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+23,Brito Garcia Ltda.,Farmácia,Brasília,DF,10,2026-06-25 11:45:40.367
+24,Porto,Farmácia,Salvador,BA,7,2026-06-25 11:45:40.367
+25,Castro,Farmácia,Brasília,DF,10,2026-06-25 11:45:40.367
+26,Fogaça,Farmácia,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+27,Rios da Mata e Filhos,Hospital,Salvador,BA,7,2026-06-25 11:45:40.367
+28,Pereira e Filhos,Drogaria Popular,Curitiba,PR,4,2026-06-25 11:45:40.367
+29,Nascimento Siqueira S.A.,Clínica,Salvador,BA,7,2026-06-25 11:45:40.367
+30,Martins Garcia Ltda.,Drogaria Popular,Curitiba,PR,4,2026-06-25 11:45:40.367
+31,Rodrigues Duarte S/A,Farmácia,Salvador,BA,7,2026-06-25 11:45:40.367
+32,Andrade Dias - ME,Drogaria Popular,Recife,PE,6,2026-06-25 11:45:40.367
+33,Azevedo,Drogaria Popular,Brasília,DF,10,2026-06-25 11:45:40.367
+34,Nunes Silva Ltda.,Farmácia,Manaus,AM,9,2026-06-25 11:45:40.367
+35,Rezende Monteiro - ME,Drogaria Popular,Curitiba,PR,4,2026-06-25 11:45:40.367
+36,Casa Grande,Farmácia,Brasília,DF,10,2026-06-25 11:45:40.367
+37,Carvalho,Farmácia,Manaus,AM,9,2026-06-25 11:45:40.367
+38,Souza Novais - EI,Farmácia,São Paulo,SP,1,2026-06-25 11:45:40.367
+39,Souza,Drogaria Popular,Manaus,AM,9,2026-06-25 11:45:40.367
+40,Pacheco,Farmácia,Manaus,AM,9,2026-06-25 11:45:40.367
+41,Fonseca,Hospital,Recife,PE,6,2026-06-25 11:45:40.367
+42,Carvalho Moraes - ME,Hospital,Manaus,AM,9,2026-06-25 11:45:40.367
+43,Sá S/A,Farmácia,São Paulo,SP,1,2026-06-25 11:45:40.367
+44,Cassiano e Filhos,Drogaria Popular,Goiânia,GO,8,2026-06-25 11:45:40.367
+45,Vieira Rodrigues - ME,Farmácia,Recife,PE,6,2026-06-25 11:45:40.367
+46,Gomes - ME,Clínica,Goiânia,GO,8,2026-06-25 11:45:40.367
+47,Moura,Farmácia,São Paulo,SP,1,2026-06-25 11:45:40.367
+48,Novaes,UPA,Brasília,DF,10,2026-06-25 11:45:40.367
+49,Rodrigues e Filhos,Hospital,Salvador,BA,7,2026-06-25 11:45:40.367
+50,Rodrigues - EI,Farmácia,São Paulo,SP,1,2026-06-25 11:45:40.367
+51,Vargas,Farmácia,Goiânia,GO,8,2026-06-25 11:45:40.367
+52,Camargo,UPA,São Paulo,SP,1,2026-06-25 11:45:40.367
+53,Lopes,Farmácia,Recife,PE,6,2026-06-25 11:45:40.367
+54,Marques Abreu e Filhos,Clínica,São Paulo,SP,1,2026-06-25 11:45:40.367
+55,Montenegro,Hospital,Rio de Janeiro,RJ,2,2026-06-25 11:45:40.367
+56,Montenegro Caldeira e Filhos,UPA,Brasília,DF,10,2026-06-25 11:45:40.367
+57,Porto,Clínica,Salvador,BA,7,2026-06-25 11:45:40.367
+58,Cassiano Freitas S.A.,Farmácia,Goiânia,GO,8,2026-06-25 11:45:40.367
+59,Peixoto Ltda.,Farmácia,Recife,PE,6,2026-06-25 11:45:40.367
+60,Almeida,UPA,Curitiba,PR,4,2026-06-25 11:45:40.367
+61,Fonseca Ltda.,Hospital,Recife,PE,6,2026-06-25 11:45:40.367
+62,Araújo da Costa - EI,Farmácia,São Paulo,SP,1,2026-06-25 11:45:40.367
+63,Barros e Filhos,Clínica,Recife,PE,6,2026-06-25 11:45:40.367
+64,Azevedo,Hospital,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+65,Cardoso Ribeiro - ME,Farmácia,Curitiba,PR,4,2026-06-25 11:45:40.367
+66,da Luz Moura - EI,Drogaria Popular,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+67,Cunha,Clínica,Curitiba,PR,4,2026-06-25 11:45:40.367
+68,Silva das Neves - ME,Drogaria Popular,Curitiba,PR,4,2026-06-25 11:45:40.367
+69,Macedo,Farmácia,Goiânia,GO,8,2026-06-25 11:45:40.367
+70,Campos,Drogaria Popular,Rio de Janeiro,RJ,2,2026-06-25 11:45:40.367
+71,Câmara Azevedo Ltda.,Farmácia,Manaus,AM,9,2026-06-25 11:45:40.367
+72,Pastor - EI,Hospital,Salvador,BA,7,2026-06-25 11:45:40.367
+73,Pastor Câmara S/A,Farmácia,Brasília,DF,10,2026-06-25 11:45:40.367
+74,Santos e Filhos,UPA,Brasília,DF,10,2026-06-25 11:45:40.367
+75,da Conceição S/A,Hospital,Curitiba,PR,4,2026-06-25 11:45:40.367
+76,Farias S/A,UPA,Rio de Janeiro,RJ,2,2026-06-25 11:45:40.367
+77,da Mota Rios - ME,Drogaria Popular,Porto Alegre,RS,5,2026-06-25 11:45:40.367
+78,Nogueira Cardoso e Filhos,Farmácia,Salvador,BA,7,2026-06-25 11:45:40.367
+79,da Cruz,Clínica,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+80,Jesus,Drogaria Popular,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+81,Brito Brito e Filhos,Clínica,Recife,PE,6,2026-06-25 11:45:40.367
+82,Fogaça,Drogaria Popular,Goiânia,GO,8,2026-06-25 11:45:40.367
+83,Jesus,Farmácia,São Paulo,SP,1,2026-06-25 11:45:40.367
+84,Siqueira,Clínica,Recife,PE,6,2026-06-25 11:45:40.367
+85,Rocha e Filhos,Farmácia,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+86,Araújo - ME,Clínica,Manaus,AM,9,2026-06-25 11:45:40.367
+87,Caldeira,Farmácia,Rio de Janeiro,RJ,2,2026-06-25 11:45:40.367
+88,Correia Correia - EI,Hospital,Rio de Janeiro,RJ,2,2026-06-25 11:45:40.367
+89,Carvalho,Clínica,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+90,Cirino,Farmácia,Manaus,AM,9,2026-06-25 11:45:40.367
+91,Martins,Farmácia,Curitiba,PR,4,2026-06-25 11:45:40.367
+92,Barbosa Macedo - EI,Farmácia,Porto Alegre,RS,5,2026-06-25 11:45:40.367
+93,Aragão e Filhos,Clínica,Goiânia,GO,8,2026-06-25 11:45:40.367
+94,Borges S.A.,Clínica,Salvador,BA,7,2026-06-25 11:45:40.367
+95,Jesus Mendonça - ME,Hospital,São Paulo,SP,1,2026-06-25 11:45:40.367
+96,Guerra Araújo S.A.,Clínica,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+97,Abreu,Farmácia,Recife,PE,6,2026-06-25 11:45:40.367
+98,da Luz,UPA,Recife,PE,6,2026-06-25 11:45:40.367
+99,da Paz,Drogaria Popular,Belo Horizonte,MG,3,2026-06-25 11:45:40.367
+100,Sampaio,Farmácia,Rio de Janeiro,RJ,2,2026-06-25 11:45:40.367
+101,Cassiano,Hospital,São Paulo,SP,1,2026-06-25 11:47:16.107
+102,da Rocha Cunha S/A,Farmácia,São Paulo,SP,1,2026-06-25 11:47:16.107
+103,Souza Ltda.,Hospital,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+104,Aragão - EI,Farmácia,São Paulo,SP,1,2026-06-25 11:47:16.107
+105,Montenegro,Drogaria Popular,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+106,Araújo Moraes S/A,UPA,Manaus,AM,9,2026-06-25 11:47:16.107
+107,Azevedo Peixoto S/A,Hospital,São Paulo,SP,1,2026-06-25 11:47:16.107
+108,Guerra Campos - EI,UPA,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+109,Pacheco Peixoto S/A,Farmácia,Curitiba,PR,4,2026-06-25 11:47:16.107
+110,Leão e Filhos,Farmácia,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+111,da Luz,Farmácia,São Paulo,SP,1,2026-06-25 11:47:16.107
+112,Rios Silva Ltda.,Hospital,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+113,da Luz Gonçalves S.A.,Clínica,Recife,PE,6,2026-06-25 11:47:16.107
+114,Marques,Farmácia,Goiânia,GO,8,2026-06-25 11:47:16.107
+115,Sá,Clínica,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+116,Albuquerque - ME,Farmácia,Recife,PE,6,2026-06-25 11:47:16.107
+117,Barbosa - EI,Drogaria Popular,Brasília,DF,10,2026-06-25 11:47:16.107
+118,Montenegro da Luz S.A.,Drogaria Popular,São Paulo,SP,1,2026-06-25 11:47:16.107
+119,Azevedo,Clínica,Manaus,AM,9,2026-06-25 11:47:16.107
+120,Freitas da Paz S.A.,Farmácia,Salvador,BA,7,2026-06-25 11:47:16.107
+121,Nogueira,Farmácia,Salvador,BA,7,2026-06-25 11:47:16.107
+122,Pimenta,Drogaria Popular,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+123,Rios - EI,Farmácia,Brasília,DF,10,2026-06-25 11:47:16.107
+124,Ribeiro,Clínica,Curitiba,PR,4,2026-06-25 11:47:16.107
+125,Carvalho Ltda.,Farmácia,São Paulo,SP,1,2026-06-25 11:47:16.107
+126,Caldeira e Filhos,Farmácia,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+127,da Mata da Paz - EI,Farmácia,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+128,Silva Fernandes S.A.,Clínica,Salvador,BA,7,2026-06-25 11:47:16.107
+129,Montenegro,Hospital,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+130,da Cunha,Hospital,Recife,PE,6,2026-06-25 11:47:16.107
+131,Borges e Filhos,Farmácia,Recife,PE,6,2026-06-25 11:47:16.107
+132,da Mota,Drogaria Popular,Brasília,DF,10,2026-06-25 11:47:16.107
+133,Abreu Ltda.,Hospital,Recife,PE,6,2026-06-25 11:47:16.107
+134,Porto da Luz S.A.,Hospital,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+135,Novaes,Farmácia,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+136,Novais,Hospital,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+137,Camargo S/A,Farmácia,Recife,PE,6,2026-06-25 11:47:16.107
+138,Nogueira Andrade Ltda.,Farmácia,Curitiba,PR,4,2026-06-25 11:47:16.107
+139,Lopes Cardoso S/A,Clínica,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+140,Fonseca,Farmácia,Curitiba,PR,4,2026-06-25 11:47:16.107
+141,Fogaça S.A.,Hospital,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+142,Rios Caldeira Ltda.,Clínica,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+143,Pinto,Farmácia,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+144,da Costa Castro S.A.,Farmácia,Salvador,BA,7,2026-06-25 11:47:16.107
+145,Alves,UPA,Brasília,DF,10,2026-06-25 11:47:16.107
+146,Sousa Farias - ME,Farmácia,Salvador,BA,7,2026-06-25 11:47:16.107
+147,da Mata Castro e Filhos,Farmácia,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+148,Garcia S/A,Farmácia,Brasília,DF,10,2026-06-25 11:47:16.107
+149,Câmara,Farmácia,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+150,Marques Ferreira Ltda.,Clínica,Recife,PE,6,2026-06-25 11:47:16.107
+151,Câmara Alves e Filhos,Drogaria Popular,Goiânia,GO,8,2026-06-25 11:47:16.107
+152,Guerra Farias Ltda.,UPA,São Paulo,SP,1,2026-06-25 11:47:16.107
+153,Vargas Ltda.,Clínica,Salvador,BA,7,2026-06-25 11:47:16.107
+154,Ramos,Clínica,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+155,Rocha,Farmácia,Salvador,BA,7,2026-06-25 11:47:16.107
+156,Alves,Farmácia,Brasília,DF,10,2026-06-25 11:47:16.107
+157,da Luz S.A.,Farmácia,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+158,Andrade,Farmácia,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+159,Peixoto - ME,Farmácia,Curitiba,PR,4,2026-06-25 11:47:16.107
+160,Siqueira,Clínica,Brasília,DF,10,2026-06-25 11:47:16.107
+161,Lopes,Hospital,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+162,Gomes - EI,Hospital,São Paulo,SP,1,2026-06-25 11:47:16.107
+163,da Cunha Aparecida e Filhos,Farmácia,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+164,Abreu,Drogaria Popular,Brasília,DF,10,2026-06-25 11:47:16.107
+165,Fonseca Lopes S/A,Farmácia,Curitiba,PR,4,2026-06-25 11:47:16.107
+166,Pinto,Clínica,Brasília,DF,10,2026-06-25 11:47:16.107
+167,Ribeiro,Hospital,Brasília,DF,10,2026-06-25 11:47:16.107
+168,Silveira Ltda.,Clínica,Goiânia,GO,8,2026-06-25 11:47:16.107
+169,Rios,Clínica,Curitiba,PR,4,2026-06-25 11:47:16.107
+170,Duarte,Drogaria Popular,Salvador,BA,7,2026-06-25 11:47:16.107
+171,Sampaio,Hospital,Curitiba,PR,4,2026-06-25 11:47:16.107
+172,Novaes,Hospital,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+173,Correia Leão e Filhos,Hospital,São Paulo,SP,1,2026-06-25 11:47:16.107
+174,Rocha,Drogaria Popular,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+175,Pimenta Nunes Ltda.,Drogaria Popular,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+176,Novaes,Drogaria Popular,Goiânia,GO,8,2026-06-25 11:47:16.107
+177,da Rosa Ltda.,Farmácia,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+178,Lopes Viana - EI,Clínica,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+179,Martins,Clínica,São Paulo,SP,1,2026-06-25 11:47:16.107
+180,Macedo,Clínica,Brasília,DF,10,2026-06-25 11:47:16.107
+181,Moraes Melo e Filhos,Farmácia,Rio de Janeiro,RJ,2,2026-06-25 11:47:16.107
+182,Ribeiro Barros Ltda.,Farmácia,Salvador,BA,7,2026-06-25 11:47:16.107
+183,Borges,Farmácia,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+184,Rocha das Neves S.A.,Clínica,Goiânia,GO,8,2026-06-25 11:47:16.107
+185,Casa Grande Alves S/A,UPA,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+186,Melo Pimenta S/A,Farmácia,Curitiba,PR,4,2026-06-25 11:47:16.107
+187,Leão,Hospital,Manaus,AM,9,2026-06-25 11:47:16.107
+188,Silva Sampaio - ME,UPA,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+189,Guerra,Farmácia,Curitiba,PR,4,2026-06-25 11:47:16.107
+190,Casa Grande Rezende e Filhos,Hospital,Salvador,BA,7,2026-06-25 11:47:16.107
+191,Sá S/A,Drogaria Popular,Salvador,BA,7,2026-06-25 11:47:16.107
+192,Câmara,Farmácia,Porto Alegre,RS,5,2026-06-25 11:47:16.107
+193,Sampaio Moreira - ME,Clínica,Salvador,BA,7,2026-06-25 11:47:16.107
+194,Novais S.A.,Farmácia,Manaus,AM,9,2026-06-25 11:47:16.107
+195,Marques S.A.,Hospital,São Paulo,SP,1,2026-06-25 11:47:16.107
+196,Rios,Drogaria Popular,Curitiba,PR,4,2026-06-25 11:47:16.107
+197,Sá,Farmácia,Recife,PE,6,2026-06-25 11:47:16.107
+198,Pimenta,Farmácia,Belo Horizonte,MG,3,2026-06-25 11:47:16.107
+199,Novaes,Drogaria Popular,Manaus,AM,9,2026-06-25 11:47:16.107
+200,Castro,Farmácia,Manaus,AM,9,2026-06-25 11:47:16.107
