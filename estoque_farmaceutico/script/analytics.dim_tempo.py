@@ -1,7 +1,5 @@
 """
-DIM_LOTE PIPELINE - EXTREME SPEED
-================================================================================
-Fastest possible load using pandas to_sql + single UPSERT
+DIM_TEMPO PIPELINE - EXTREME SPEED
 """
 
 import os
@@ -10,9 +8,6 @@ import psycopg2
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 
-# ============================================================================
-# CONFIGURATION
-# ============================================================================
 load_dotenv()
 
 DB_CONFIG = {
@@ -26,35 +21,41 @@ DB_CONFIG = {
 DATABASE_URL = f"postgresql://{DB_CONFIG['user']}:{DB_CONFIG['password']}@{DB_CONFIG['host']}:{DB_CONFIG['port']}/{DB_CONFIG['database']}"
 
 print("=" * 70)
-print("DIM_LOTE PIPELINE (EXTREME SPEED)")
+print("DIM_TEMPO PIPELINE (EXTREME)")
 print("=" * 70)
 
 # ============================================================================
 # CONNECTION
 # ============================================================================
 print("\n[1] Connecting...")
-engine = create_engine(DATABASE_URL)
 conn = psycopg2.connect(**DB_CONFIG)
 cursor = conn.cursor()
+engine = create_engine(DATABASE_URL)
 print("Connected!")
 
 # ============================================================================
-# LOAD & PROCESS DATA
+# LOAD AND BUILD
 # ============================================================================
-print("\n[2] Loading and processing data...")
+print("\n[2] Building dimension...")
 
+# Load dates and build attributes in one query
 query = """
     SELECT DISTINCT
-        lote_id,
-        data_fabricacao,
-        data_validade,
-        quantidade_inicial
-    FROM raw.lotes
-    WHERE lote_id IS NOT NULL
+        semana_referencia,
+        EXTRACT(YEAR FROM semana_referencia)::INT as ano,
+        EXTRACT(QUARTER FROM semana_referencia)::INT as trimestre,
+        EXTRACT(MONTH FROM semana_referencia)::INT as mes,
+        TO_CHAR(semana_referencia, 'Month') as mes_nome,
+        EXTRACT(WEEK FROM semana_referencia)::INT as semana_numero,
+        (semana_referencia - EXTRACT(DOW FROM semana_referencia)::INT)::DATE as dia_inicio_semana,
+        (semana_referencia - EXTRACT(DOW FROM semana_referencia)::INT + 6)::DATE as dia_fim_semana
+    FROM raw.estoque_movimentacao_semanal
+    WHERE semana_referencia IS NOT NULL
+    ORDER BY semana_referencia
 """
 
 df = pd.read_sql(query, engine)
-print(f"Records: {len(df)}")
+print(f"Dates: {len(df)}")
 
 if len(df) == 0:
     print("No data. Exiting.")
@@ -66,42 +67,36 @@ if len(df) == 0:
 # ============================================================================
 print("\n[3] Creating table...")
 
-cursor.execute("DROP TABLE IF EXISTS analytics.dim_lote CASCADE")
+cursor.execute("DROP TABLE IF EXISTS analytics.dim_tempo CASCADE")
 cursor.execute("""
-    CREATE TABLE analytics.dim_lote (
-        lote_key SERIAL PRIMARY KEY,
-        lote_id INT NOT NULL UNIQUE,
-        data_fabricacao DATE,
-        data_validade DATE,
-        quantidade_inicial INTEGER,
-        createdt TIMESTAMP DEFAULT NOW(),
-        changedtm TIMESTAMP DEFAULT NOW()
+    CREATE TABLE analytics.dim_tempo (
+        tempo_key SERIAL PRIMARY KEY,
+        semana_referencia DATE UNIQUE NOT NULL,
+        ano SMALLINT NOT NULL,
+        trimestre SMALLINT NOT NULL,
+        mes SMALLINT NOT NULL,
+        mes_nome VARCHAR(20) NOT NULL,
+        semana_numero SMALLINT NOT NULL,
+        dia_inicio_semana DATE NOT NULL,
+        dia_fim_semana DATE NOT NULL,
+        CreateDt TIMESTAMP NOT NULL DEFAULT NOW(),
+        ChangedTM TIMESTAMP NOT NULL DEFAULT NOW()
     )
 """)
 conn.commit()
 print("Table created")
 
 # ============================================================================
-# BULK INSERT (MAIS RÁPIDO)
+# BULK INSERT
 # ============================================================================
-print("\n[4] Bulk inserting...")
+print("\n[4] Inserting...")
 
-# Usar to_sql do pandas (muito rápido)
-df.to_sql('dim_lote', engine, schema='analytics', if_exists='append', index=False, method='multi')
-
-# Atualizar timestamps
-cursor.execute("""
-    UPDATE analytics.dim_lote 
-    SET createdt = NOW(), changedtm = NOW()
-    WHERE createdt IS NULL
-""")
-conn.commit()
-
+df.to_sql('dim_tempo', engine, schema='analytics', if_exists='append', index=False, method='multi')
 print(f"Inserted: {len(df)} records")
 
 conn.close()
 print("\nDone!")
 
 print("\n" + "=" * 70)
-print("PIPELINE COMPLETED")
+print("DIM_TEMPO PIPELINE COMPLETED")
 print("=" * 70)

@@ -32,6 +32,8 @@ from sqlalchemy import create_engine
 # and allows switching between dev/prod environments without code changes.
 load_dotenv()
 
+REFERENCE_DATE = datetime.now() - timedelta(weeks=13)
+
 # Database configuration - all credentials come from environment
 DB_CONFIG = {
     'host': os.getenv('DB_HOST'),
@@ -87,16 +89,16 @@ query = f"""
     select 
         f.medicamento_key,
         f.sala_key,
-        t.semana_referencia,
+        f.semana_referencia,
         f.saidas,
-        EXTRACT(DOW FROM t.semana_referencia) as dia_semana,
-        EXTRACT(MONTH FROM t.semana_referencia) as mes,
-        EXTRACT(QUARTER FROM t.semana_referencia) as trimestre,
-        EXTRACT(YEAR FROM t.semana_referencia) as ano
+        EXTRACT(DOW FROM f.semana_referencia) as dia_semana,
+        EXTRACT(MONTH FROM f.semana_referencia) as mes,
+        EXTRACT(QUARTER FROM f.semana_referencia) as trimestre,
+        EXTRACT(YEAR FROM f.semana_referencia) as ano
     from analytics.fact_estoque_semanal f
-    join analytics.dim_tempo t on f.tempo_key = t.tempo_key
-    where t.semana_referencia >= '{FORECAST_CONFIG['history_start']}'
-    order by f.sala_key, f.medicamento_key, t.semana_referencia
+    where f.semana_referencia >= '{FORECAST_CONFIG['history_start']}'
+    and f.semana_referencia <= '{REFERENCE_DATE.date()}'
+    order by f.sala_key, f.medicamento_key, f.semana_referencia
 """
 
 df = pd.read_sql(query, engine)
@@ -301,7 +303,7 @@ for (sala, med), group in df.groupby(['sala_key', 'medicamento_key']):
     recommendations_list.append({
         'sala_key': sala,
         'medicamento_key': med,
-        'data_calculo': datetime.now().date(),
+        'data_calculo': REFERENCE_DATE.date(),
         'media_historica': rec['historical_mean'],
         'desvio_historico': rec['historical_std'],
         'coeficiente_variacao': rec['coefficient_variation'],

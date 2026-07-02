@@ -49,13 +49,14 @@ cursor.execute("""
         medicamento_key INT NOT NULL,
         lote_key INT NOT NULL,               
         semana_referencia DATE NOT NULL,
-        ano INT,
-        semana_numero INT,
         saldo_inicial INT,
         entradas INT,
         saidas INT,
-        saldo_final INT,
-        ruptura_estoque BOOLEAN,
+        saldo_final INT, 
+        ruptura_estoque BOOL,
+        valor_venda_unitario NUMERIC(10,2),
+        limite_inferior NUMERIC(10, 2),
+        limite_superior NUMERIC(10, 2),
         createdtm TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
         changedtm TIMESTAMP NULL
     )
@@ -76,33 +77,60 @@ WITH joined_data AS (
         m.medicamento_key,
         dl.lote_key,
         raw.semana_referencia,
-        raw.ano,
         raw.semana_numero,
         raw.saldo_inicial,
         raw.entradas,
         raw.saidas,
         raw.saldo_final,
         raw.ruptura_estoque,
-        ROW_NUMBER() OVER (PARTITION BY s.sala_key, m.medicamento_key, raw.semana_referencia ORDER BY raw.semana_referencia) as rn
+        raw.valor_venda_unitario,
+        lim.limite_inferior,
+        lim.limite_superior,
+        ROW_NUMBER() OVER (
+            PARTITION BY s.sala_key, m.medicamento_key, dl.lote_key, raw.semana_referencia 
+            ORDER BY raw.semana_referencia
+        ) as rn
     FROM raw.estoque_movimentacao_semanal raw
     INNER JOIN analytics.dim_sala s ON raw.sala_id = s.sala_id
     INNER JOIN analytics.dim_medicamento m ON raw.medicamento_id = m.medicamento_id
-    INNER JOIN raw.lotes l ON raw.medicamento_id = l.medicamento_id AND raw.sala_id = l.sala_id
-    INNER JOIN analytics.dim_lote dl ON l.lote_id = dl.lote_id
+    INNER JOIN analytics.dim_lote dl ON raw.lote_id = dl.lote_id
+    LEFT JOIN forecast.limites_mensais_simples lim 
+        ON lim.medicamento_key = m.medicamento_key 
+        AND lim.sala_key = s.sala_key
+        AND DATE_TRUNC('month', raw.semana_referencia) = lim.mes_referencia
     WHERE raw.sala_id IS NOT NULL 
       AND raw.medicamento_id IS NOT NULL
+      AND raw.lote_id IS NOT NULL
 )
 INSERT INTO analytics.fact_estoque_semanal (
-    sala_key, medicamento_key, lote_key, semana_referencia, 
-    ano, semana_numero, saldo_inicial, entradas, saidas, 
-    saldo_final, ruptura_estoque
+    sala_key, 
+    medicamento_key, 
+    lote_key, 
+    semana_referencia, 
+    saldo_inicial, 
+    entradas, 
+    saidas, 
+    saldo_final,
+    ruptura_estoque,
+    valor_venda_unitario,
+    limite_inferior,
+    limite_superior
 )
 SELECT 
-    sala_key, medicamento_key, lote_key, semana_referencia,
-    ano, semana_numero, saldo_inicial, entradas, saidas,
-    saldo_final, ruptura_estoque
+    sala_key, 
+    medicamento_key, 
+    lote_key, 
+    semana_referencia,
+    saldo_inicial, 
+    entradas, 
+    saidas,
+    saldo_final,
+    ruptura_estoque,
+    valor_venda_unitario,
+    limite_inferior,
+    limite_superior
 FROM joined_data
-WHERE rn = 1  -- Remove duplicatas
+WHERE rn = 1
 """
 
 cursor.execute(query_optimized)
