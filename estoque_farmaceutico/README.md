@@ -80,12 +80,21 @@ Os pipelines rodam automaticamente via workflows em `.github/workflows/`,
 usando secrets do repositório (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`,
 `DB_PORT`) — nenhuma credencial fica exposta no código.
 
-## Dashboard Power BI
+## 📊 Dashboard Power BI
 
-- KPIs de saúde de estoque por sala e medicamento.
-- Classificação ABC de medicamentos.
-- Rastreamento de vencimentos próximos.
-- Comparação entre previsão (forecast) e valores reais.
+O dashboard consome o modelo estrela hospedado no PostgreSQL (Neon) e está
+organizado em três páginas:
+
+- **Alertas**: classifica o estoque por nível de risco (RUPTURA, CRÍTICO,
+  VENC_PRÓXIMO, ATENÇÃO, OK), com curva ABC de medicamentos.
+- **Tendências**: histórico de movimentação de estoque, giro e cobertura,
+  com indicadores de sazonalidade.
+- **Previsão**: projeção de saídas e recomendação de reposição, calculada
+  por um modelo de Machine Learning (Random Forest) treinado sobre o
+  histórico semanal de estoque.
+
+As medidas DAX incluem giro de estoque, cobertura de estoque, taxa de
+ruptura, sinalizadores de vencimento e curva ABC.
 
 ## Estrutura de pastas
 
@@ -187,12 +196,21 @@ Pipelines run automatically via workflows in `.github/workflows/`, using
 repository secrets (`DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASSWORD`,
 `DB_PORT`) — no credentials exposed in code.
 
-## Power BI dashboard
+## 📊 Power BI Dashboard
 
-- Stock health KPIs by room and medicine.
-- ABC classification of medicines.
-- Near-expiration tracking.
-- Forecast vs. actual comparison.
+The dashboard consumes the star-schema model hosted on PostgreSQL (Neon)
+and is organized into three pages:
+
+- **Alerts**: classifies inventory by risk level (STOCKOUT, CRITICAL,
+  NEAR_EXPIRY, ATTENTION, OK), including an ABC medication curve.
+- **Trends**: historical stock movement, turnover, and coverage, with
+  seasonality indicators.
+- **Forecast**: projected demand and restock recommendations, calculated
+  by a Machine Learning model (Random Forest) trained on weekly stock
+  history.
+
+DAX measures include inventory turnover, stock coverage, stockout rate,
+expiration flags, and ABC curve analysis.
 
 ## Folder structure
 
