@@ -18,7 +18,7 @@ consumidos por um dashboard em Power BI.
 
 **Tecnologias**: PostgreSQL (Neon), Python, psycopg2, requests, API Datajud (CNJ), Power BI/DAX.
 
-📄 Detalhes completos no [README do projeto](https://github.com/gxlobato/Portfolio/blob/main/JurisTrack/README.md).
+📄 Detalhes completos no [README do projeto](https://github.com/gxlobato/Portfolio/blob/main/JurisTrack/readme.md).
 
 ### 🏥 [Rede de Farmácias — Estoque (DrugStoreDB)](https://github.com/gxlobato/Portfolio/blob/main/estoque_farmaceutico)
 
