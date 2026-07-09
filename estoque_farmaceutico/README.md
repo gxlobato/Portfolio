@@ -105,6 +105,8 @@ estoque_farmaceutico/
 └── requirements.txt
 ```
 
+[![Estoque Farmceutico](https://youtu.be/ULXlfe4Ze9M)
+
 ## Como rodar localmente
 
 ```bash
