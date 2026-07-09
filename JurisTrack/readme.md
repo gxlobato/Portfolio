@@ -66,6 +66,8 @@ juristrack/
 ├── status_diario.py         # extrai os dados relevantes do retorno bruto para a tabela principal de processos
 ├── .env.example              # modelo das variáveis de ambiente necessárias (sem valores reais)
 └── README.md
+├── PowerBI/
+     ├────JurisTrack.pbix        #arquivo do power bi desktop
 ```
 > ⚠️ Nenhum script contém credenciais no código. Todas as chaves e strings de conexão são lidas de variáveis de ambiente (`DATABASE_URL`, `DATAJUD_API_KEY`), conforme boa prática de segurança.
 
