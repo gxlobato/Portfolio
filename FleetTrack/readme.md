@@ -107,19 +107,6 @@ pytest tests/ -v
 - `test_tipar_e_limpar_remove_registro_sem_coordenada` — valida a regra de qualidade que descarta registros sem latitude/longitude, evitando dado inútil na Silver
 - `test_deduplicar_remove_mesma_captura_repetida` — confirma que duas capturas idênticas do mesmo veículo (mesmo timestamp) não geram registro duplicado
 
-## 📸 Evidências de execução
-
-**Prefect UI — detalhe de uma execução (Bronze → Silver → Gold):**
-
-
-**Prefect UI — histórico de execuções:**
-
-
-**Estrutura de pastas (Bronze/Silver/Gold):**
-
-
-**Amostra dos dados na Gold:**
-
 ## 📌 Status do projeto
 
 Projeto em desenvolvimento ativo, construído como parte do meu portfólio para demonstrar a construção de um pipeline de dados de ponta a ponta com arquitetura Medallion: ingestão resiliente, processamento incremental, orquestração e testes automatizados.
