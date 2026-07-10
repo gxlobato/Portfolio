@@ -65,8 +65,7 @@ Prefect, pytest, API Pública Olho Vivo (SPTrans).
 Portfolio/
 ├── JurisTrack/             # Monitoramento de processos judiciais (CNJ Datajud)
 ├── estoque_farmaceutico/   # Data warehouse de estoque farmacêutico
-├── olho-vivo-medallion/    # Pipeline de frota de ônibus em tempo real (Medallion)
-├── DQ/                     # Projeto de Data Quality (em construção)
+├── FleetTrack/    # Pipeline de frota de ônibus em tempo real (Medallion)
 └── .github/workflows/      # Automação dos pipelines
 ```
 
