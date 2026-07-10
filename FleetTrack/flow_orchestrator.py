@@ -18,7 +18,7 @@ from ingest_bronze import main as rodar_ingestao_bronze
 from transform_silver_incremental import main as rodar_silver_incremental
 from load_gold import main as rodar_gold
 
-
+# Tarefas do Prefect (cada uma é uma etapa do pipeline)
 @task(retries=2, retry_delay_seconds=30, name="Ingestão Bronze")
 def task_ingest_bronze():
     """
@@ -49,7 +49,7 @@ def task_gerar_gold():
     rodar_gold()
     logger.info("Agregação Gold concluída.")
 
-
+# Orquestração do pipeline completo
 @flow(name="Pipeline Olho Vivo - Bronze a Gold", task_runner=ConcurrentTaskRunner())
 def pipeline_olho_vivo():
     """
@@ -61,7 +61,7 @@ def pipeline_olho_vivo():
     resultado_silver = task_transform_silver(wait_for=[resultado_bronze])
     task_gerar_gold(wait_for=[resultado_silver])
 
-
+# Ponto de entrada do script
 if __name__ == "__main__":
     # Execução única (manual)
     #pipeline_olho_vivo()
