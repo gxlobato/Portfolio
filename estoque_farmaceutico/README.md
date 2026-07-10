@@ -100,6 +100,7 @@ ruptura, sinalizadores de vencimento e curva ABC.
 
 ![Demo](estoque_farmaceutico/Dashboard/demo.gif)
 
+
 ## Estrutura de pastas
 
 ```
