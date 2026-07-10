@@ -98,7 +98,7 @@ ruptura, sinalizadores de vencimento e curva ABC.
 
 ## Demonstração
 
-![Demonstração](Dashboard/demon.gif)
+![demo](Dashboard/demon.gif)
 
 ## Estrutura de pastas
 
