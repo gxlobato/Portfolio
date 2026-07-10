@@ -1,0 +1,7 @@
+requests
+python-dotenv
+pandas
+pyarrow
+schedule
+prefect
+pytest
