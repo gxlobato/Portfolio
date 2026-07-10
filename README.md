@@ -31,7 +31,7 @@ GitHub Actions, Power BI/DAX.
 
 📄 Detalhes completos no [README do projeto](https://github.com/gxlobato/Portfolio/blob/main/estoque_farmaceutico/README.md).
 
-### 🚌 [FleetTrack — Pipeline de Frota de Ônibus em Tempo Real](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion)
+### 🚌 [FleetTrack — Pipeline de Frota de Ônibus em Tempo Real](https://github.com/gxlobato/Portfolio/tree/main/FleetTrack)
 
 Pipeline de dados em tempo real da frota de ônibus de São Paulo, construído
 com arquitetura Medallion (Bronze → Silver → Gold), consumindo a API pública
@@ -103,7 +103,7 @@ GitHub Actions, Power BI/DAX.
 
 📄 Full details in the [project README](https://github.com/gxlobato/Portfolio/blob/main/estoque_farmaceutico/README.md).
 
-### 🚌 [FleetTrack — Real-Time Bus Fleet Pipeline](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion)
+### 🚌 [FleetTrack — Real-Time Bus Fleet Pipeline](https://github.com/gxlobato/Portfolio/tree/main/FleetTrack)
 
 A real-time data pipeline for São Paulo's bus fleet, built with the
 Medallion architecture (Bronze → Silver → Gold), consuming SPTrans' public
