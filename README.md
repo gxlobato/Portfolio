@@ -44,10 +44,6 @@ Prefect, pytest, API Pública Olho Vivo (SPTrans).
 
 📄 Detalhes completos no [README do projeto](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion/README.md).
 
-### 🔧 DQ (Data Quality)
-
-Projeto em construção.
-
 ## Tecnologias gerais do portfólio
 
 | Categoria            | Ferramentas       |
@@ -120,10 +116,6 @@ unit tests covering the transformation logic.
 Prefect, pytest, Olho Vivo Public API (SPTrans).
 
 📄 Full details in the [project README](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion/README.md).
-
-### 🔧 DQ (Data Quality)
-
-Work in progress.
 
 ## General portfolio tech stack
 
