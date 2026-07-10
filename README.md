@@ -103,7 +103,7 @@ GitHub Actions, Power BI/DAX.
 
 📄 Full details in the [project README](https://github.com/gxlobato/Portfolio/blob/main/estoque_farmaceutico/README.md).
 
-### 🚌 [olho-vivo-medallion — Real-Time Bus Fleet Pipeline](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion)
+### 🚌 [FleetTrack — Real-Time Bus Fleet Pipeline](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion)
 
 A real-time data pipeline for São Paulo's bus fleet, built with the
 Medallion architecture (Bronze → Silver → Gold), consuming SPTrans' public
@@ -114,7 +114,7 @@ unit tests covering the transformation logic.
 **Tech stack**: Python, requests, python-dotenv, pandas, pyarrow (Parquet),
 Prefect, pytest, Olho Vivo Public API (SPTrans).
 
-📄 Full details in the [project README](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion/README.md).
+📄 Full details in the [project README](https://github.com/gxlobato/Portfolio/blob/main/FleetTrack/README.md).
 
 ## General portfolio tech stack
 
