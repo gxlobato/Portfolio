@@ -98,8 +98,7 @@ ruptura, sinalizadores de vencimento e curva ABC.
 
 ## Demonstração
 
-![Demo](estoque_farmaceutico/Dashboard/demo.gif)
-
+![Demo](Dashboard/demo.gif)
 
 ## Estrutura de pastas
 
