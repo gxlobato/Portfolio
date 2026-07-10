@@ -104,6 +104,7 @@ ruptura, sinalizadores de vencimento e curva ABC.
     alt="Demonstração do Dashboard"
     width="100%">
 </p>
+
 ## Estrutura de pastas
 
 ```
@@ -219,6 +220,15 @@ and is organized into three pages:
 
 DAX measures include inventory turnover, stock coverage, stockout rate,
 expiration flags, and ABC curve analysis.
+
+## Demonstration
+
+<p align="center">
+  <img
+    src="https://raw.githubusercontent.com/gxlobato/Portfolio/main/estoque_farmaceutico/Dashboard/demo.gif"
+    alt="Dashboard Demonstration"
+    width="100%">
+</p>
 
 ## Folder structure
 
