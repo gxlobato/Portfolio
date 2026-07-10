@@ -99,9 +99,11 @@ ruptura, sinalizadores de vencimento e curva ABC.
 ## Demonstração
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/gxlobato/Portfolio/main/estoque_farmaceutico/Dashboard/demo.gif" width="100%">
+  <img
+    src="https://raw.githubusercontent.com/gxlobato/Portfolio/main/estoque_farmaceutico/Dashboard/demo.gif"
+    alt="Demonstração do Dashboard"
+    width="100%">
 </p>
-
 ## Estrutura de pastas
 
 ```
