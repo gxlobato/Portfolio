@@ -42,7 +42,7 @@ e testes unitários da lógica de transformação.
 **Tecnologias**: Python, requests, python-dotenv, pandas, pyarrow (Parquet),
 Prefect, pytest, API Pública Olho Vivo (SPTrans).
 
-📄 Detalhes completos no [README do projeto](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion/README.md).
+📄 Detalhes completos no [README do projeto](https://github.com/gxlobato/Portfolio/blob/main/FleetTrack/readme.md).
 
 ## Tecnologias gerais do portfólio
 
@@ -114,7 +114,7 @@ unit tests covering the transformation logic.
 **Tech stack**: Python, requests, python-dotenv, pandas, pyarrow (Parquet),
 Prefect, pytest, Olho Vivo Public API (SPTrans).
 
-📄 Full details in the [project README](https://github.com/gxlobato/Portfolio/blob/main/FleetTrack/README.md).
+📄 Full details in the [project README](https://github.com/gxlobato/Portfolio/blob/main/FleetTrack/readme.md).
 
 ## General portfolio tech stack
 
