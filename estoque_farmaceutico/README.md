@@ -96,6 +96,10 @@ organizado em três páginas:
 As medidas DAX incluem giro de estoque, cobertura de estoque, taxa de
 ruptura, sinalizadores de vencimento e curva ABC.
 
+## Demonstração
+
+![Demonstração do Dashboard](estoque_farmaceutico/demonstração.gif)
+
 ## Estrutura de pastas
 
 ```
@@ -104,8 +108,6 @@ estoque_farmaceutico/
 ├── script/        # Pipelines Python (ETL, dimensões, fatos, forecast)
 └── requirements.txt
 ```
-
-[![Estoque Farmceutico](https://youtu.be/ULXlfe4Ze9M)
 
 ## Como rodar localmente
 
