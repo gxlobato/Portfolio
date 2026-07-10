@@ -31,6 +31,19 @@ GitHub Actions, Power BI/DAX.
 
 📄 Detalhes completos no [README do projeto](https://github.com/gxlobato/Portfolio/blob/main/estoque_farmaceutico/README.md).
 
+### 🚌 [FleetTrack — Pipeline de Frota de Ônibus em Tempo Real](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion)
+
+Pipeline de dados em tempo real da frota de ônibus de São Paulo, construído
+com arquitetura Medallion (Bronze → Silver → Gold), consumindo a API pública
+Olho Vivo da SPTrans. Ingestão resiliente a falhas da API, processamento
+incremental com checkpoint, orquestração com retry automático via Prefect,
+e testes unitários da lógica de transformação.
+
+**Tecnologias**: Python, requests, python-dotenv, pandas, pyarrow (Parquet),
+Prefect, pytest, API Pública Olho Vivo (SPTrans).
+
+📄 Detalhes completos no [README do projeto](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion/README.md).
+
 ### 🔧 DQ (Data Quality)
 
 Projeto em construção.
@@ -39,13 +52,16 @@ Projeto em construção.
 
 | Categoria            | Ferramentas       |
 | -------------------- | ----------------- |
-| Linguagem            | Python            |
-| Banco de dados       | PostgreSQL (Neon) |
-| Manipulação de dados | pandas            |
-| Machine Learning     | scikit-learn      |
-| Automação            | GitHub Actions    |
-| Visualização         | Power BI          |
-| Versionamento        | Git / GitHub      |
+| Linguagem            | Python             |
+| Banco de dados       | PostgreSQL (Neon)  |
+| Manipulação de dados | pandas             |
+| Armazenamento        | Parquet            |
+| Machine Learning     | scikit-learn       |
+| Orquestração         | Prefect            |
+| Automação            | GitHub Actions     |
+| Testes               | pytest             |
+| Visualização         | Power BI           |
+| Versionamento        | Git / GitHub       |
 
 ## Estrutura do repositório
 
@@ -53,6 +69,7 @@ Projeto em construção.
 Portfolio/
 ├── JurisTrack/             # Monitoramento de processos judiciais (CNJ Datajud)
 ├── estoque_farmaceutico/   # Data warehouse de estoque farmacêutico
+├── olho-vivo-medallion/    # Pipeline de frota de ônibus em tempo real (Medallion)
 ├── DQ/                     # Projeto de Data Quality (em construção)
 └── .github/workflows/      # Automação dos pipelines
 ```
@@ -91,6 +108,19 @@ GitHub Actions, Power BI/DAX.
 
 📄 Full details in the [project README](https://github.com/gxlobato/Portfolio/blob/main/estoque_farmaceutico/README.md).
 
+### 🚌 [olho-vivo-medallion — Real-Time Bus Fleet Pipeline](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion)
+
+A real-time data pipeline for São Paulo's bus fleet, built with the
+Medallion architecture (Bronze → Silver → Gold), consuming SPTrans' public
+Olho Vivo API. Features fault-tolerant ingestion, incremental processing
+with checkpointing, orchestration with automatic retries via Prefect, and
+unit tests covering the transformation logic.
+
+**Tech stack**: Python, requests, python-dotenv, pandas, pyarrow (Parquet),
+Prefect, pytest, Olho Vivo Public API (SPTrans).
+
+📄 Full details in the [project README](https://github.com/gxlobato/Portfolio/blob/main/olho-vivo-medallion/README.md).
+
 ### 🔧 DQ (Data Quality)
 
 Work in progress.
@@ -98,14 +128,17 @@ Work in progress.
 ## General portfolio tech stack
 
 | Category         | Tools             |
-| ---------------- | ----------------- |
-| Language         | Python            |
-| Database         | PostgreSQL (Neon) |
-| Data handling    | pandas            |
-| Machine Learning | scikit-learn      |
-| Automation       | GitHub Actions    |
-| Visualization    | Power BI          |
-| Version control  | Git / GitHub      |
+| ----------------- | ----------------- |
+| Language          | Python             |
+| Database          | PostgreSQL (Neon)  |
+| Data handling     | pandas             |
+| Storage           | Parquet            |
+| Machine Learning  | scikit-learn       |
+| Orchestration     | Prefect            |
+| Automation        | GitHub Actions     |
+| Testing           | pytest             |
+| Visualization     | Power BI           |
+| Version control   | Git / GitHub       |
 
 ## Repository structure
 
@@ -113,6 +146,7 @@ Work in progress.
 Portfolio/
 ├── JurisTrack/             # Judicial process monitoring (CNJ Datajud)
 ├── estoque_farmaceutico/   # Pharmacy stock data warehouse
+├── olho-vivo-medallion/    # Real-time bus fleet pipeline (Medallion)
 ├── DQ/                     # Data Quality project (work in progress)
 └── .github/workflows/      # Pipeline automation
 ```
